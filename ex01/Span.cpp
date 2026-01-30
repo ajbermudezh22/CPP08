@@ -67,3 +67,11 @@ int Span::longestSpan() const {
 unsigned int Span::size() const {
     return static_cast<unsigned int>(_values.size());
 }
+
+const char *Span::FullException::what() const throw() {
+    return "Span: capacity exceeded";
+}
+
+const char *Span::NotEnoughNumbersException::what() const throw() {
+    return "Span: not enough numbers";
+}

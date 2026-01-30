@@ -21,16 +21,12 @@ class Span {
 public:
     class FullException : public std::exception {
     public:
-        virtual const char *what() const throw() {
-            return "Span: capacity exceeded";
-        }
+        virtual const char *what() const throw();
     };
 
     class NotEnoughNumbersException : public std::exception {
     public:
-        virtual const char *what() const throw() {
-            return "Span: not enough numbers";
-        }
+        virtual const char *what() const throw();
     };
 
     Span();
